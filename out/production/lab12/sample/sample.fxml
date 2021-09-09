@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="page_login" alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="44.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="500.0" minHeight="456.0" prefHeight="500.0" />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #ffebcd;" GridPane.rowIndex="1">
+         <children>
+            <Label layoutX="66.0" layoutY="42.0" text="Welcome to JavaChat!" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="103.0" layoutY="123.0" text="Login to continue" />
+            <Label layoutX="122.0" layoutY="180.0" text="Username" />
+            <Label layoutX="126.0" layoutY="250.0" text="Password" />
+            <Button layoutX="124.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="25.0" prefWidth="53.0" text="Login" />
+            <Hyperlink layoutX="47.0" layoutY="439.0" onAction="#redirectRegister" text="Don't have an account? Register now" />
+            <TextField fx:id="txt_username" layoutX="76.0" layoutY="197.0" />
+            <TextField fx:id="txt_password" layoutX="76.0" layoutY="267.0" />
+            <Label fx:id="txt_login_error_msg" layoutX="66.0" layoutY="152.0" text="Username or Password is wrong" textFill="RED" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>

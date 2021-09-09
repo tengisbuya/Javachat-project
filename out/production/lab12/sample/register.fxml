@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <AnchorPane prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #ffebcd;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+      <children>
+         <Label layoutX="98.0" layoutY="99.0" text="Register an account" />
+         <Label layoutX="112.0" layoutY="37.0" text="JavaChat">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+         <TextField fx:id="reg_txt_username" layoutX="76.0" layoutY="180.0" />
+         <TextField fx:id="reg_txt_firstname" layoutX="76.0" layoutY="238.0" />
+         <TextField fx:id="reg_txt_lastname" layoutX="76.0" layoutY="296.0" />
+         <TextField fx:id="reg_txt_password" layoutX="76.0" layoutY="357.0" />
+         <Label layoutX="124.0" layoutY="157.0" text="Username" />
+         <Label layoutX="124.0" layoutY="215.0" text="First name" />
+         <Label layoutX="125.0" layoutY="273.0" text="Last name" />
+         <Label layoutX="127.0" layoutY="334.0" text="Password" />
+         <Button layoutX="122.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleRegister" text="Register" />
+         <Hyperlink layoutX="64.0" layoutY="456.0" onAction="#redirectLogin" text="Already have an account? Login" />
+         <Label fx:id="hidden_reg_txt_success" layoutX="56.0" layoutY="433.0" text="You have registered! Login to enter." textFill="#259403" visible="false" />
+         <Label fx:id="hidden_reg_txt_error" layoutX="86.0" layoutY="433.0" text="Error! Check your inputs." textFill="#fc0000" visible="false" />
+      </children>
+   </AnchorPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
